@@ -1,0 +1,27 @@
+<!-- templates/admin/dashboard.html -->
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5 pt-5">
+    <h2 class="text-2xl font-bold mb-4">Admin Dashboard</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="bg-primary text-white p-4 rounded shadow">
+                <h4>Total Users</h4>
+                <p class="fs-3">{{ total_users }}</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="bg-success text-white p-4 rounded shadow">
+                <h4>Total Transactions</h4>
+                <p class="fs-3">{{ total_transactions }}</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="bg-warning text-dark p-4 rounded shadow">
+                <h4> Total Wallet Balance (₦)</h4>
+                <p class="fs-3">{{ total_wallet_balance }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

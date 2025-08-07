@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container py-5">
+  <h2 class="mb-4">Choose a Utility Bill</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <a href="{{ url_for('services_routes.utility') }}" class="btn btn-outline-success w-100 py-3 shadow-sm">
+        ⚡ Electricity Bill
+      </a>
+    </div>
+    <div class="col-md-4">
+      <a href="{{ url_for('services_routes.utility') }}" class="btn btn-outline-primary w-100 py-3 shadow-sm">
+        📡 Cable TV Subscription
+      </a>
+    </div>
+    <div class="col-md-4">
+      <a href="{{ url_for('services_routes.utility') }}" class="btn btn-outline-danger w-100 py-3 shadow-sm">
+        🎓 Result Token
+      </a>
+    </div>
+    <div class="col-md-4">
+      <a href="{{ url_for('services_routes.utility') }}" class="btn btn-outline-dark w-100 py-3 shadow-sm">
+        🏆 Betting Account
+      </a>
+    </div>
+    
+    <div class="col-md-4">
+      <a href="{{ url_for('services_routes.utility') }}" class="btn btn-outline-info w-100 py-3 shadow-sm">
+        💧 Water Bill
+      </a>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

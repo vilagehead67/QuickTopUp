@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container py-5">
+  <h2 class="mb-4">Fund Your Wallet</h2>
+
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for msg in messages %}
+        <div class="alert alert-info">{{ msg }}</div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+  
+  <form method="POST" action="{{ url_for('services_routes.initiate_funding') }}">
+    <div class="mb-3">
+      <label for="amount" class="form-label">Enter Amount (₦)</label>
+      <input type="number" class="form-control" id="amount" name="amount" required min="100">
+    </div>
+    <button type="submit" class="btn btn-primary">Proceed to Pay</button>
+  </form>
+</div>
+{% endblock %}

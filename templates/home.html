@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% block title %}Welcome to VTU Portal{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-primary text-white py-5 text-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Welcome To QuickTopUp</h1>
+    <p class="lead">We are a registered telecommunication company that provides voice or data transmission services, such as Mobile Data and Airtime (VTU).</p>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Awesome Features</h2>
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <h5 class="fw-bold">We Are Reliable</h5>
+        <p>VTU Portal is a fully optimized platform for reliability and dependability. You get 100% value for any transaction you carry with us.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <h5 class="fw-bold">We Are Automated</h5>
+        <p>We use cutting-edge technology to run our service. Our data delivery and wallet funding is automated. Airtime top-up and data purchase are delivered almost instantly.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <h5 class="fw-bold">Customer Support</h5>
+        <p>Our customer service is just a click away. Don't hesitate to consult us. All transactions are attended to within 5-15 mins.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Become an Agent -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Become An Agent</h2>
+    <p class="text-center">Join our network of outstanding entrepreneurs partnering with QuickTopUp. Bring the "easy-payments" experience closer to your community and earn a commission for every transaction you perform.</p>
+    <p class="text-center">We offer our referrers the best referral incentives to promote entrepreneurship, skill acquisition, growth, and ICT development in our society.</p>
+  </div>
+</section>
+
+<!-- Pricing Section (Simplified Sample) -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Valuable Data Plan And Prices</h2>
+    <div class="row">
+      <div class="col-md-3">
+        <h5 class="fw-bold">MTN</h5>
+        <p>36GB - ₦10,670 (30 days)</p>
+        <p>2GB - ₦1,400 (Monthly)</p>
+        <p>90GB - ₦24,500 (60 days)</p>
+      </div>
+      <div class="col-md-3">
+        <h5 class="fw-bold">GLO</h5>
+        <p>200MB - ₦110 (30 days)</p>
+        <p>4.1GB - ₦1290 (30 days)</p>
+        <p>10GB - ₦3030 (30 days)</p>
+      </div>
+      <div class="col-md-3">
+        <h5 class="fw-bold">9MOBILE</h5>
+        <p>3GB - ₦1080 (30 days)</p>
+        <p>10GB - ₦2750 (30 days)</p>
+        <p>2GB - ₦720 (30 days)</p>
+      </div>
+      <div class="col-md-3">
+        <h5 class="fw-bold">AIRTEL</h5>
+        <p>100MB - ₦100 (1 day)</p>
+        <p>35GB - ₦10,000 (30 days)</p>
+        <p>1TB - ₦196,000 (1 year)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5 text-center">
+  <div class="container">
+    <h2 class="fw-bold">Get started with QuickTopUp today</h2>
+    <p>We offer instant recharge of Airtime, Databundle, CableTV (DStv, GOtv & Startimes), Electricity Bill Payment and more.</p>
+    <a href="{{ url_for('auth.register') }}" class="btn btn-primary btn-lg">Register Now</a>
+  </div>
+</section>
+{% endblock %}

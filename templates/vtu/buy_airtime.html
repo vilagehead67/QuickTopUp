@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-sm border-0 rounded-4">
+        <div class="card-body p-4">
+          <h4 class="text-center mb-4">Buy Airtime</h4>
+
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ 'success' if category == 'success' else 'danger' }} alert-dismissible fade show" role="alert">
+                  {{ message }}
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+
+          <form method="POST">
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="text" class="form-control" id="phone" name="phone" placeholder="e.g. 08182415466" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="amount" class="form-label">Amount</label>
+              <select class="form-select" id="amount" name="amount" required>
+                <option value="">-- Select Amount --</option>
+                <option value="100">₦100</option>
+                <option value="200">₦200</option>
+                <option value="500">₦500</option>
+                <option value="1000">₦1000</option>
+                <option value="5000">₦5000</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="network" class="form-label">Network</label>
+              <select class="form-select" id="network" name="network" required>
+                <option value="">-- Select Network --</option>
+                <option value="mtn">MTN</option>
+                <option value="glo">Glo</option>
+                <option value="airtel">Airtel</option>
+                <option value="etisalat">9mobile</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Buy Airtime</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

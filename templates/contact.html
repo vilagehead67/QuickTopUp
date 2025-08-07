@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}Contact Us - QuickTopUp{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <div class="text-center mb-5">
+    <h2 class="fw-bold">Contact QuickTopUp Support</h2>
+    <p class="lead">Have questions or complaints? We’re here to help.</p>
+  </div>
+
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for msg in messages %}
+        <div class="alert alert-info">{{ msg }}</div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+
+  <div class="row">
+    <!-- Contact Form -->
+    <div class="col-md-6">
+      <div class="card shadow-sm border-0">
+        <div class="card-body">
+          <h5 class="card-title mb-4">Submit a Complaint</h5>
+          <form method="POST" action="{{ url_for('home.submit_complaint') }}">
+            <div class="mb-3">
+              <label for="email" class="form-label">Your Email</label>
+              <input type="email" name="email" id="email" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" name="subject" id="subject" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="message" class="form-label">Complaint / Message</label>
+              <textarea name="message" id="message" rows="5" class="form-control" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Submit Complaint</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Support Info -->
+    <div class="col-md-6 mt-5 mt-md-0">
+      <div class="bg-light rounded p-4 shadow-sm h-100">
+        <h5 class="fw-bold mb-3">Quick Support</h5>
+        <p class="mb-2">You can reach us via:</p>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="bi bi-telephone-fill me-2 text-primary"></i><strong>+234 810 123 4567</strong></li>
+          <li class="mb-2"><i class="bi bi-telephone-fill me-2 text-primary"></i><strong>+234 901 234 5678</strong></li>
+          <li class="mb-2"><i class="bi bi-envelope-fill me-2 text-primary"></i><strong>support@quicktopup.ng</strong></li>
+        </ul>
+        <p class="text-muted">We typically respond within 15 minutes during working hours.</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
