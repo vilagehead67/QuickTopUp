@@ -106,7 +106,7 @@ def forgot_password():
 
             reset_link = url_for('auth.reset_password', token=token, _external=True)
 
-            msg = Message(subject='VTU portal Password Reset Request',
+            msg = Message(subject='QuickTopUp Password Reset Request',
                           sender=current_app.config['MAIL_USERNAME'],
                           recipients=[email])
             msg.body = f"Click the link below to reset your password:\n{reset_link}"

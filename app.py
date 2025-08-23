@@ -6,9 +6,6 @@ from dotenv import load_dotenv
 from extensions import mongo, bcrypt, mail
 from datetime import timedelta
 from routes.services_routes import services_bp
-
-
-
 import os
 
 # Load environment variables

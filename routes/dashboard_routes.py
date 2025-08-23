@@ -18,6 +18,8 @@ def dashboard():
 
     return render_template('dashboard/dashboard.html', user=user, transactions=transactions)
 
+
+
 @dashboard_bp.route('/fund-wallet')
 @login_required
 def fund_wallet():
